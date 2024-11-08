@@ -19,15 +19,15 @@ Este proyecto analiza los datos de compras de clientes en una tienda minoristas 
 
 ## Metodología 
 
-### Exploración de Datos 
+### 1. Exploración de Datos 
 - Se realizó una exploración inicial del dataset a cada parámetro.
 - Se identificó los valores nulos o que no podrían aportar nada de valor.
 
-### Limpieza de Datos 
+### 2. Limpieza de Datos 
 - Se realizó la eliminación de registros previamente determinados como inútiles.
 - Se eliminaron 118414 registros, lo que representa el 22.54% del total de registros.
 
-### Reducción de Dimensionalidad 
+### 3. Reducción de Dimensionalidad 
 - De los datos limpios, se decidió crear un nuevo dataframe con nuevas columnas que aporten más información:
   - **Customer ID**: Identificación del cliente.
   - **Monetary Value**: Suma del total de compras pertenecientes al cliente. 
@@ -47,10 +47,10 @@ Este proyecto analiza los datos de compras de clientes en una tienda minoristas 
 
 ![Gráfico 3D de Dispersión de los Datos](Imágenes/Gráfico_Dispersión.png)
 
-### Normalización de Datos 
+### 4. Normalización de Datos 
 - Se aplicó la "Normalización Z-Score" para estandarizar las variables y que no afencten mucho en el algoritmo KMeans.
 
-### Implementación de Algoritmo KMeans 
+### 5. Implementación de Algoritmo KMeans 
 - Se utilizó el algoritmo KMeans para agrupar a los clientes en diferentes clusters.
 - Primero se iteró con muchos valores de "k" para determinar cuál valor es la mejor opción a elegir.
 - Se utilizó el "Coeficiente de Silueta" para determinar de mejor manera el valor de "k".
@@ -58,7 +58,7 @@ Este proyecto analiza los datos de compras de clientes en una tienda minoristas 
 
 ![Clusters Creados](Imágenes/Clusters.png)
 
-### Análisis de los Grupos 
+### 6. Análisis de los Grupos 
 - Para finalizar se interpretó o dio un significado a los clusters creados.
 - Se utilizó el "Gráfico de Violín" para determinar de mejor manera el comportamiento de los clientes en cada cluster.
 
