@@ -23,8 +23,7 @@ El dataset utilizado proviene de ventas minoristas en el Reino Unido y contiene 
 - Identificación de valores faltantes y atípicos.
 
 ### Limpieza de Datos 
-- Eliminación de registros duplicados y valores nulos.
-- Transformación de columnas para mejorar la calidad del dataset.
+- Se realizó la eliminación de registros previamente determinados como inútiles.
 
 ### Reducción de Dimensionalidad 
 - Creación de una nueva columna llamada "Total", calculada como la multiplicación de la cantidad comprada por el precio unitario del producto.
@@ -33,12 +32,22 @@ El dataset utilizado proviene de ventas minoristas en el Reino Unido y contiene 
 - - **Monetary Value**: Suma del total de compras pertenecientes al ID. 
 - - **Frequency**: Número de facturas únicas del cliente.
 - - **Recency**: Días desde la última compra.
+ 
+![Gráfico de Barras](Imágenes/Gráfico_Barras.png)
+
+![Gráfico de Cajas](Imágenes/Gráfico_Cajas.png)
+
+- Se eliminó los registros atípicos, en lo que dio como resultado:
+
+![Gráfico de Cajas Limpios](Imágenes/Gráfico_Cajas_No_Atípicos.png)
 
 ### Normalización de Datos 
 - Aplicación de la técnica de estandarización para normalizar las variables.
 
 ### Implementación de Algoritmo KMeans 
 - Utilización del algoritmo KMeans para agrupar a los clientes en diferentes clusters.
+
+![Clusters Creados](Imágenes/Clusters.png)
 
 ### Análisis de los Grupos 
 - Interpretación de los clusters creados para clasificar a los diferentes clientes y entender su comportamiento de compra.
