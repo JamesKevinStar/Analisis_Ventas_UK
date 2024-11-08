@@ -1,63 +1,71 @@
 # Analisis de Ventas en UK
 
 ## Descripción:
-Este proyecto analiza los datos de ventas minoristas realizadas con sede en UK, con el objetivo de identificar 
+Este proyecto analiza los datos de compras de clientes en una tienda minoristas con sede en UK, con el objetivo de identificar 
 
 
 ## Tabla de Contenidos 
-- [Descripción](#descripción)
 - [Datos](#datos)
 - [Metodología](#metodología)
 - [Resultados](#resultados)
 - [Conclusión](#conclusión)
 
 ## Datos 
-El dataset utilizado proviene de ventas minoristas en el Reino Unido y contiene múltiples columnas sobre transacciones de productos. 
+- El dataset utilizado proviene de la página "UC Irvine Machine Learning Repository", el dataser se llama [Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii), que es del año 2019.
+- Las fechas de los datos están comprendidas entre 01/12/2009 y 09/12/2011, las cuales están divididas en 2 hojas de excel.
+- Para este problema solo se agarraron los datos de la primera hoja, que son hasta el año 2010.
 
 ![Dataset](Imágenes/Dataset.png)
 
 ## Metodología 
 
 ### Exploración de Datos 
-- Exploración inicial del dataset para entender su estructura y contenido.
-- Identificación de valores faltantes y atípicos.
+- Se realizó una exploración inicial del dataset a cada parámetro.
+- Se identificó los valores nulos o que no podrían aportar nada de valor.
 
 ### Limpieza de Datos 
 - Se realizó la eliminación de registros previamente determinados como inútiles.
+- Se eliminaron 118414 registros, lo que representa el 22.54% del total de registros.
 
 ### Reducción de Dimensionalidad 
-- Creación de una nueva columna llamada "Total", calculada como la multiplicación de la cantidad comprada por el precio unitario del producto.
-- Construcción de un nuevo DataFrame con las siguientes columnas:
-- - **Customer ID**: Identificación del cliente.
-- - **Monetary Value**: Suma del total de compras pertenecientes al ID. 
-- - **Frequency**: Número de facturas únicas del cliente.
-- - **Recency**: Días desde la última compra.
+- De los datos limpios, se decidió crear un nuevo dataframe con nuevas columnas que aporten más información:
+  - **Customer ID**: Identificación del cliente.
+  - **Monetary Value**: Suma del total de compras pertenecientes al cliente. 
+  - **Frequency**: Número de facturas únicas del cliente.
+  - **Recency**: Días desde la última compra.
+
+- Se graficaron algunos diagramas para visualizar de mejor manera los nuevos registros.
  
 ![Gráfico de Barras](Imágenes/Gráfico_Barras.png)
 
 ![Gráfico de Cajas](Imágenes/Gráfico_Cajas.png)
 
+- Se visualizaba que habían muchos datos atípicos en los parámetros creados.
 - Se eliminó los registros atípicos, en lo que dio como resultado:
 
 ![Gráfico de Cajas Limpios](Imágenes/Gráfico_Cajas_No_Atípicos.png)
 
+![Gráfico 3D de Dispersión de los Datos](Imágenes/Gráfico_Dispersión.png)
+
 ### Normalización de Datos 
-- Aplicación de la técnica de estandarización para normalizar las variables.
+- Se aplicó la "Normalización Z-Score" para estandarizar las variables y que no afencten mucho en el algoritmo KMeans.
 
 ### Implementación de Algoritmo KMeans 
-- Utilización del algoritmo KMeans para agrupar a los clientes en diferentes clusters.
+- Se utilizó el algoritmo KMeans para agrupar a los clientes en diferentes clusters.
+- Primero se iteró con muchos valores de "k" para determinar cuál valor es la mejor opción a elegir.
+- Se utilizó el "Coeficiente de Silueta" para determinar de mejor manera el valor de "k".
+- Al final de visualizó los datos con sus respectivos clusters.
 
 ![Clusters Creados](Imágenes/Clusters.png)
 
 ### Análisis de los Grupos 
-- Interpretación de los clusters creados para clasificar a los diferentes clientes y entender su comportamiento de compra.
+- Para finalizar se interpretó o dio un significado a los clusters creados.
+- Se utilizó el "Gráfico de Violín" para determinar de mejor manera el comportamiento de los clientes en cada cluster.
 
 ## Resultados 
-- Identificación de patrones en el comportamiento de compra de los clientes.
-- Clasificación de clientes en diferentes grupos según su valor monetario, frecuencia de compra y recencia. ## Conclusión El análisis de datos permitió clasificar a los clientes en grupos distintos, lo cual puede ayudar a diseñar estrategias de marketing más efectivas y personalizadas.
+- Se identificó los patrones de comportamiento de compra de los clientes.
+- Se clasificó a los clientes en diferentes grupos según su valor monetario, frecuencia de compra y recencia.
+- También se determinó qué acciones realizar para cada grupo de clientes.
 
 ## Conclusión 
-El análisis de datos permitió clasificar a los clientes en grupos distintos, lo cual puede ayudar a diseñar estrategias de marketing más efectivas y personalizadas.  
-  
-**Autores:**
-  - James Kevin Estrella Vilca - Estudiante - [JamesKevinStar](https://github.com/JamesKevinStar)
+El análisis de datos permitió clasificar a los clientes en grupos distintos, lo cual puede ayudar a diseñar diferentes estrategias para atraer o mantener a los clientes.  
