@@ -14,7 +14,7 @@ Este proyecto analiza los datos de ventas minoristas realizadas con sede en UK, 
 ## Datos 
 El dataset utilizado proviene de ventas minoristas en el Reino Unido y contiene múltiples columnas sobre transacciones de productos. 
 
-![Dataset](Imagenes/Dataset.png)
+![Dataset](Imágenes/Dataset.png)
 
 ## Metodología 
 
