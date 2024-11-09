@@ -1,7 +1,7 @@
 # Analisis de Ventas en UK
 
 ## Descripción:
-Este proyecto analiza los datos de compras de clientes en una tienda minoristas con sede en UK, con el objetivo de identificar 
+Este proyecto analiza los datos de compras de clientes en una tienda minoristas con sede en UK, con el objetivo de identificar diferentes grupos de clientes y planificar distintas estrategias dependiendo del comportamiento del cliente. 
 
 
 ## Tabla de Contenidos 
