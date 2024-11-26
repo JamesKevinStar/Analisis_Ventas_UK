@@ -62,6 +62,8 @@ Este proyecto analiza los datos de compras de clientes en una tienda minoristas 
 - Para finalizar se interpretó o dio un significado a los clusters creados.
 - Se utilizó el "Gráfico de Violín" para determinar de mejor manera el comportamiento de los clientes en cada cluster.
 
+![Grupos](Imágenes/Grupos.png)
+
 ## Resultados 
 - Se identificó los patrones de comportamiento de compra de los clientes.
 - Se clasificó a los clientes en diferentes grupos según su valor monetario, frecuencia de compra y recencia.
